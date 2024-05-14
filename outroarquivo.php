@@ -7,25 +7,31 @@
 </head>
 <body>
     <?php
-    echo"<h1>média dos alunos doidos</h1>";
+    
 
-    $nota1 = 6;
-    $nota2 = 8;
-    $nota3 = 10;
+    $nomealuno = $_GET['Nomealuno'];
+    $nota1 = $_GET['Colocanota1'];
+    $nota2 = $_GET['Colocanota2'];
+    $nota3 = $_GET['Colocanota3'];
 
     $media = ($nota1 + $nota2 + $nota3)/3;
 
-    if ($media < 8) {
-        echo "Você foi reprovado";
+    $mediaround = round($media);
+
+    echo"<h1> A média de $nomealuno</h1>";
+
+    echo "sua média é $mediaround";
+    if ($mediaround < 8) {
+        echo "<p style='color:red'>Você foi reprovado<p/>";
         echo"<br>";
-    }elseif ($media >= 8) {
-        echo "Você foi aprovado";
+    }elseif ($mediaround >= 8) {
+        echo "<p style='color:green'> Você foi aprovado<p/>";
         echo"<br>";
     }
 
+    echo "<button onclick=\"window.location= 'index.html'\">Voltar</button>";
 
 
-    echo "sua média é $media";
     ?>
 </body>
 </html>

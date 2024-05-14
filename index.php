@@ -29,12 +29,14 @@
       $user = "SESE";
 
 
-       $nome = array("1", "2", "3" ,"4");
+      $nome = array("1", "2", "3" ,"4");
 
-       foreach ($nome as $n){
+      foreach ($nome as $n){
             echo "<br>";
             echo $n;
        };
+
+    echo"<button\'window.location.replace(index.html)\>Voltar</button>"
 
       
     ?>
